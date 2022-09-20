@@ -5,6 +5,7 @@ const donationService = require("../services/donationService");
 const asyncHandler = require("express-async-handler");
 
 exports.getAllDonations = async (req, res) => {
+  console.log("hi");
   const donations = await donationService.getAllDonations();
   if (!donations) {
     res.status(404);
